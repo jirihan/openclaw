@@ -9,6 +9,8 @@ services:
     dockerCommand: node openclaw.mjs gateway --allow-unconfigured
     healthCheckPath: /startupz
     envVars:
+      - key: OPENCLAW_DOCKER_BUILD_TSDOWN_MAX_OLD_SPACE_MB
+        value: "512"
       - key: OPENCLAW_GATEWAY_PORT
         value: "8080"
       - key: OPENCLAW_STATE_DIR
